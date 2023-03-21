@@ -1,0 +1,931 @@
+
+<!DOCTYPE html>
+<html lang="en" data-pgc-set-master>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Online Police Clearance</title>
+    <link rel="stylesheet" href="https://idcorp-clearance.com/assets/stylesheets/bootstrap.min.css" />
+    <link href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://idcorp-clearance.com/assets/stylesheets/dataTables.bootstrap.min.css" />
+    <link rel="stylesheet" href="https://idcorp-clearance.com/assets/stylesheets/responsive.bootstrap.min.css" />
+    <link rel="stylesheet" href="https://idcorp-clearance.com/assets/stylesheets/bootstrap-datetimepicker.min.css" />
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Coda" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="https://idcorp-clearance.com/assets/stylesheets/defaultstyle.css" />
+    <link rel="stylesheet" href="https://idcorp-clearance.com/assets/stylesheets/screenstyle.css" />
+    <link rel="stylesheet" href="https://idcorp-clearance.com/assets/stylesheets/printstyle.css" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="page-header header">
+            <div class="col-xs-2 col-sm-3">
+                <img src="https://idcorp-clearance.com/assets/images/pnp-logo.png" class="pnplogo" />
+            </div>
+            <div class="col-xs-8 col-sm-6 header-text-div">
+                    <h4 class="header-text-sub-2">Republic of the Philippines</h4>
+                    <h4 class="header-text-sub-2">National Police Commission</h4>
+                    <h4 class="header-text-sub">Philippine National Police</h4>
+                    <h4 class="header-text-main">NATIONAL CAPITAL REGION POLICE OFFICE</h4>
+            </div>
+            <div class="col-xs-2 col-sm-3">
+                <img src="https://idcorp-clearance.com/assets/images/ncrpo-logo.png" class="stationlogo" />
+            </div>
+        </div>
+    </div>
+        <div class="row">
+    <div class="col-xs-12">
+        <h2 class="title">ONLINE POLICE CLEARANCE APPLICATION</h2>
+    </div>
+</div>
+    <br/>
+    <div class="row">
+        <div class="col-sm-1 col-md-2"></div>
+        <div class="col-sm-10 col-md-8">
+            <div class="panel panel-primary">
+                <div class="panel-heading panel-heading-opc">
+                    <h3 class="panel-title panel-title-opc">APPLICANT DETAILS</h3>
+                </div>
+                <div class="panel-body">
+                                        <form action="/apply" method="POST" class="application-form" id="new_application_form"
+                          name="new_application_form">
+                        <input type="hidden" name="_token" value="JIQpD8b1K8mVNLoO9qqb24KUuOyRCMv5KZNKacIa">
+                                                <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group ">
+                                    <label for="application_station"> Police Station
+                                        <span class="req-fields">*</span>
+                                    </label>
+                                    <select id="application_station" name="application_station" class="form-control" value=""
+                                            data-validation="required">
+                                        <option value="" selected="selected">(POLICE STATION)</option>
+                                                                                    <option value="1"> CALOOCAN </option>
+                                                                                    <option value="3"> MAKATI </option>
+                                                                                    <option value="4"> MALABON </option>
+                                                                                    <option value="7"> MUNTINLUPA </option>
+                                                                                    <option value="10"> PARANAQUE </option>
+                                                                                    <option value="11"> PASAY </option>
+                                                                                    <option value="12"> PASIG </option>
+                                                                                    <option value="14"> QUEZON CITY </option>
+                                                                                    <option value="18"> TALISAY </option>
+                                                                                    <option value="20"> S-CALOOCAN </option>
+                                                                            </select>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group ">
+                                    <label for="application_type_display"> Application Type
+                                        <span class="req-fields"></span>
+                                    </label>
+                                    <input type="text" id="application_type_display" class="form-control" value="NEW" disabled>                                     <input type="hidden" id="application_type" name="application_type" class="form-control" value="1"/>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group ">
+                                    <label for="purpose"> Purpose
+                                        <span class="req-fields">*</span>
+                                    </label>
+                                    <select id="purpose" name="purpose" class="form-control" value=""
+                                            data-validation="required">
+                                        <option value="" selected="selected"></option>
+                                                                                    <option value="1"> ADOPTION </option>
+                                                                                    <option value="2"> AFP ENLISTMENT </option>
+                                                                                    <option value="3"> AFP REQUIREMENT </option>
+                                                                                    <option value="4"> BANK REQUIREMENT </option>
+                                                                                    <option value="5"> BUSINESS REQUIREMENT </option>
+                                                                                    <option value="6"> CHANGE OF FIRST NAME </option>
+                                                                                    <option value="7"> CHANGE OF GENDER </option>
+                                                                                    <option value="8"> CHANGE OF MIDDLE NAME </option>
+                                                                                    <option value="9"> CHANGE OF SURNAME </option>
+                                                                                    <option value="10"> CIVIL SERVICE REQUIREMENT </option>
+                                                                                    <option value="11"> COMELEC REQUIREMENT </option>
+                                                                                    <option value="12"> CORRECTION OF BIRTH CERTIFICATE </option>
+                                                                                    <option value="13"> CSWD REQUIREMENT </option>
+                                                                                    <option value="14"> DRIVER&#039;S LICENSE </option>
+                                                                                    <option value="15"> DSWD REQUIREMENT </option>
+                                                                                    <option value="16"> EMPLOYMENT ABROAD </option>
+                                                                                    <option value="17"> FIREARMS LICENSE </option>
+                                                                                    <option value="18"> FIREARMS RENEWAL </option>
+                                                                                    <option value="19"> FIREARMS REQUIREMENT </option>
+                                                                                    <option value="20"> FOR ABROAD </option>
+                                                                                    <option value="21"> BOARD EXAM </option>
+                                                                                    <option value="22"> FIREWORKS PERMIT </option>
+                                                                                    <option value="23"> FOR PROVISION </option>
+                                                                                    <option value="24"> FOR REHABILITATION </option>
+                                                                                    <option value="25"> GENERAL PURPOSE </option>
+                                                                                    <option value="26"> GSIS REQUIREMENT </option>
+                                                                                    <option value="27"> IDENTIFICATION </option>
+                                                                                    <option value="28"> IMMIGRATION </option>
+                                                                                    <option value="29"> LEGAL INTENT </option>
+                                                                                    <option value="30"> LEGAL </option>
+                                                                                    <option value="31"> LOAN </option>
+                                                                                    <option value="32"> LOAN REQUIREMENT </option>
+                                                                                    <option value="33"> LOAN RETIREMENT </option>
+                                                                                    <option value="34"> LOCAL EMPLOYMENT </option>
+                                                                                    <option value="35"> LTO REQUIREMENT </option>
+                                                                                    <option value="36"> LTOPF </option>
+                                                                                    <option value="37"> MARRIAGE REQUIREMENT </option>
+                                                                                    <option value="38"> MOTORCYCLE FRANCHISE </option>
+                                                                                    <option value="39"> NATURALIZATION </option>
+                                                                                    <option value="40"> NBI REQUIREMENT </option>
+                                                                                    <option value="41"> PSA REQUIREMENT </option>
+                                                                                    <option value="42"> OJT </option>
+                                                                                    <option value="43"> PAGIBIG REQUIREMENT </option>
+                                                                                    <option value="44"> PASSPORT REQUIREMENT </option>
+                                                                                    <option value="45"> PHILHEALTH REQUIREMENT </option>
+                                                                                    <option value="46"> PNP APPLICATION </option>
+                                                                                    <option value="47"> PNP REQUIREMENT </option>
+                                                                                    <option value="48"> PRC REQUIREMENT </option>
+                                                                                    <option value="49"> PTC PERMIT </option>
+                                                                                    <option value="50"> REFERENCE </option>
+                                                                                    <option value="51"> REMITTANCE </option>
+                                                                                    <option value="52"> RETIREMENT </option>
+                                                                                    <option value="53"> SECURITY LICENSE </option>
+                                                                                    <option value="54"> SSS REQUIREMENT </option>
+                                                                                    <option value="55"> TERMINAL LEAVE </option>
+                                                                                    <option value="56"> TESDA REQUIREMENT </option>
+                                                                                    <option value="57"> TRAVEL ABROAD </option>
+                                                                                    <option value="58"> VERIFICATION </option>
+                                                                                    <option value="59"> VISA </option>
+                                                                                    <option value="60"> VISA REQUIREMENT </option>
+                                                                                    <option value="61"> VISA SEAMAN </option>
+                                                                                    <option value="62"> VISA SEAMANBOOK REQUIREMENT </option>
+                                                                                    <option value="63"> VISA SEAWOMAN </option>
+                                                                                    <option value="64"> VISA USA </option>
+                                                                                    <option value="65"> WEDDING </option>
+                                                                                    <option value="66"> COURT ORDER </option>
+                                                                                    <option value="67"> SCHOOL REQUIREMENT </option>
+                                                                                    <option value="68"> FIDELITY BOND </option>
+                                                                                    <option value="69"> PHILIPPINE COAST GUARD ENLISTMENT </option>
+                                                                                    <option value="73"> PROBATION </option>
+                                                                                    <option value="74"> DFA REQUIREMENT </option>
+                                                                                    <option value="75"> BAILBOND REQUIREMENT </option>
+                                                                                    <option value="76"> NOTARIAL COMMISSION </option>
+                                                                                    <option value="77"> BJMP REQUIREMENT </option>
+                                                                                    <option value="78"> PHIL NAVY REQUIREMENT </option>
+                                                                                    <option value="79"> PHIL COASTGUARD REQUIREMENT </option>
+                                                                                    <option value="80"> JBC REQUIREMENT </option>
+                                                                                    <option value="81"> AMELIORATION (SAP) </option>
+                                                                            </select>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group ">
+                                    <label for="first_name"> First Name
+                                        <span class="req-fields">*</span>
+                                    </label>
+                                    <input type="text" id="first_name" name="first_name" class="form-control" value=""
+                                           data-validation="required" data-sanitize="trim"/>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group ">
+                                    <label for="middle_name"> Middle Name </label>
+                                    <input type="text" id="middle_name" name="middle_name" class="form-control" value=""
+                                           data-sanitize="trim"/>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group ">
+                                    <label for="last_name"> Last Name
+                                        <span class="req-fields">*</span>
+                                    </label>
+                                    <input type="text" id="last_name" name="last_name" class="form-control" value=""
+                                           data-validation="required" data-sanitize="trim"/>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group ">
+                                    <label for="house_lot_block"> Address
+                                        <span class="req-fields">*</span>
+                                    </label>
+                                    <input type="text" id="house_lot_block" name="house_lot_block" class="form-control"
+                                           value="" placeholder="(HOUSE # / LOT # / BLOCK #)" data-validation="required" data-sanitize="trim"/>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group ">
+                                    <label for="street_area">
+                                        <span class="req-fields">&nbsp;</span>
+                                    </label>
+                                    <input type="text" id="street_area" name="street_area" class="form-control" value=""
+                                           placeholder="(STREET / AREA)" data-validation="required" data-sanitize="trim"/>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group ">
+                                    <label for="barangay">
+                                        <span class="req-fields">&nbsp;</span>
+                                    </label>
+                                    <input type="text" id="barangay" name="barangay" class="form-control" value=""
+                                           placeholder="(BARANGAY)" data-validation="required" data-sanitize="trim"/>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group ">
+                                    <label for="city_municipality">
+                                        <span class="req-fields">&nbsp;</span>
+                                    </label>
+                                    <select id="city_municipality" name="city_municipality" class="form-control" value=""
+                                            data-validation="required">
+                                        <option value="" selected="selected">(CITY /MUNICIPALITY)</option>
+                                                                                    <option value="1"> CALOOCAN </option>
+                                                                                    <option value="2"> LAS PINAS </option>
+                                                                                    <option value="3"> MAKATI </option>
+                                                                                    <option value="4"> MALABON </option>
+                                                                                    <option value="5"> MANDALUYONG </option>
+                                                                                    <option value="6"> MANILA </option>
+                                                                                    <option value="7"> MUNTINLUPA </option>
+                                                                                    <option value="8"> MARIKINA </option>
+                                                                                    <option value="9"> NAVOTAS </option>
+                                                                                    <option value="10"> PARANAQUE </option>
+                                                                                    <option value="11"> PASAY </option>
+                                                                                    <option value="12"> PASIG </option>
+                                                                                    <option value="13"> PATEROS </option>
+                                                                                    <option value="14"> QUEZON CITY </option>
+                                                                                    <option value="15"> SAN JUAN </option>
+                                                                                    <option value="16"> TAGUIG </option>
+                                                                                    <option value="17"> VALENZUELA </option>
+                                                                                    <option value="18"> TALISAY </option>
+                                                                                    <option value="19"> AGUSAN DEL NORTE </option>
+                                                                                    <option value="20"> S-CALOOCAN </option>
+                                                                                    <option value="21"> AKLAN </option>
+                                                                                    <option value="22"> ALBAY </option>
+                                                                                    <option value="23"> ANTIQUE </option>
+                                                                                    <option value="24"> APAYAO </option>
+                                                                                    <option value="25"> AURORA </option>
+                                                                                    <option value="26"> BASILAN </option>
+                                                                                    <option value="27"> BATAAN </option>
+                                                                                    <option value="28"> BATANES </option>
+                                                                                    <option value="29"> BATANGAS </option>
+                                                                                    <option value="30"> BENGUET </option>
+                                                                                    <option value="31"> BILIRAN </option>
+                                                                                    <option value="32"> BOHOL </option>
+                                                                                    <option value="33"> BUKIDNON </option>
+                                                                                    <option value="34"> BULACAN </option>
+                                                                                    <option value="35"> CAGAYAN </option>
+                                                                                    <option value="36"> CAMARINES NORTE </option>
+                                                                                    <option value="37"> CAMARINES SUR </option>
+                                                                                    <option value="38"> CAMIGUIN </option>
+                                                                                    <option value="39"> CAPIZ </option>
+                                                                                    <option value="40"> CATANDUANES </option>
+                                                                                    <option value="41"> CAVITE </option>
+                                                                                    <option value="42"> CEBU </option>
+                                                                                    <option value="43"> COMPOSTELA&nbsp;VALLEY </option>
+                                                                                    <option value="44"> COTABATO </option>
+                                                                                    <option value="45"> DAVAO DEL NORTE </option>
+                                                                                    <option value="46"> DAVAO DEL SUR </option>
+                                                                                    <option value="47"> DAVAO OCCIDENTAL </option>
+                                                                                    <option value="48"> DAVAO ORIENTAL </option>
+                                                                                    <option value="49"> DINAGAT ISLANDS </option>
+                                                                                    <option value="50"> EASTERN SAMAR </option>
+                                                                                    <option value="51"> GUIMARAS </option>
+                                                                                    <option value="52"> IFUGAO </option>
+                                                                                    <option value="53"> ILOCOS NORTE </option>
+                                                                                    <option value="54"> ILOCOS SUR </option>
+                                                                                    <option value="55"> ILOILO </option>
+                                                                                    <option value="56"> ISABELA </option>
+                                                                                    <option value="57"> KALINGA </option>
+                                                                                    <option value="58"> LA UNION </option>
+                                                                                    <option value="59"> LAGUNA </option>
+                                                                                    <option value="60"> LANAO DEL NORTE </option>
+                                                                                    <option value="61"> LANAO DEL SUR </option>
+                                                                                    <option value="62"> LEYTE </option>
+                                                                                    <option value="63"> MAGUINDANAO </option>
+                                                                                    <option value="64"> MARINDUQUE </option>
+                                                                                    <option value="65"> MASBATE </option>
+                                                                                    <option value="66"> MISAMIS </option>
+                                                                                    <option value="67"> MISAMIS ORIENTAL </option>
+                                                                                    <option value="68"> MOUNTAIN PROVINCE </option>
+                                                                                    <option value="69"> NEGROS OCCIDENTAL </option>
+                                                                                    <option value="70"> NEGROS ORIENTAL </option>
+                                                                                    <option value="71"> NORTHERN SAMAR </option>
+                                                                                    <option value="72"> NUEVA ECIJA </option>
+                                                                                    <option value="73"> NUEVA VIZCAYA </option>
+                                                                                    <option value="74"> OCCIDENTAL MINDORO </option>
+                                                                                    <option value="75"> ORIENTAL MINDORO </option>
+                                                                                    <option value="76"> PALAWAN </option>
+                                                                                    <option value="77"> PAMPANGA </option>
+                                                                                    <option value="78"> PANGASINAN </option>
+                                                                                    <option value="79"> QUEZON </option>
+                                                                                    <option value="80"> QUIRINO </option>
+                                                                                    <option value="81"> RIZAL </option>
+                                                                                    <option value="82"> ROMBLON </option>
+                                                                                    <option value="83"> SAMAR </option>
+                                                                                    <option value="84"> SARANGANI </option>
+                                                                                    <option value="85"> SIQUIJOR </option>
+                                                                                    <option value="86"> SORSOGON </option>
+                                                                                    <option value="87"> SOUTH COTABATO </option>
+                                                                                    <option value="88"> SOUTHERN LEYTE </option>
+                                                                                    <option value="89"> SULTAN KUDARAT </option>
+                                                                                    <option value="90"> SULU </option>
+                                                                                    <option value="91"> SURIGAO DEL NORTE </option>
+                                                                                    <option value="92"> SURIGAO DEL SUR </option>
+                                                                                    <option value="93"> TARLAC </option>
+                                                                                    <option value="94"> TAWI-TAWI </option>
+                                                                                    <option value="95"> ZAMBALES </option>
+                                                                                    <option value="96"> ZAMBOANGA DEL NORTE </option>
+                                                                                    <option value="97"> ZAMBOANGA DEL SUR </option>
+                                                                                    <option value="98"> ZAMBOANGA SIBUGAY </option>
+                                                                                    <option value="99"> METRO MANILA </option>
+                                                                                    <option value="100"> TALISAY </option>
+                                                                            </select>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group ">
+                                    <label for="date_of_birth"> Date of Birth
+                                        <span class="req-fields">*</span>
+                                    </label>
+                                    <div class='input-group date' id='birthday-date-picker'>
+                                        <input type="text" id="date_of_birth" name="date_of_birth" class="form-control" placeholder="YYYY-MM-DD" data-validation="required">
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group ">
+                                    <label for="place_of_birth"> Place of Birth
+                                        <span class="req-fields">*</span>
+                                    </label>
+                                    <input type="text" id="place_of_birth" name="place_of_birth" class="form-control"
+                                           value="" data-validation="required" data-sanitize="trim"/>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group ">
+                                    <label for="gender"> Gender
+                                        <span class="req-fields">*</span>
+                                    </label>
+                                    <select id="gender" name="gender" class="form-control" value=""
+                                            data-validation="required">
+                                        <option value="" selected="selected"></option>
+                                        <option value="MALE"> MALE</option>
+                                        <option value="FEMALE"> FEMALE</option>
+                                    </select>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group ">
+                                    <label for="nationality"> Nationality
+                                        <span class="req-fields">*</span>
+                                    </label>
+                                    <select id="nationality" name="nationality" class="form-control" value=""
+                                            data-validation="required">
+                                        <option value="" selected="selected"></option>
+                                                                                    <option value="1"> FILIPINO </option>
+                                                                                    <option value="2"> AFRICAN </option>
+                                                                                    <option value="3"> ALBANIAN </option>
+                                                                                    <option value="4"> ALGERIAN </option>
+                                                                                    <option value="5"> AMERICAN </option>
+                                                                                    <option value="6"> ANGOLAN </option>
+                                                                                    <option value="7"> ARABIAN </option>
+                                                                                    <option value="8"> ARGENTINEAN </option>
+                                                                                    <option value="9"> ARMENIAN </option>
+                                                                                    <option value="10"> AUSTRALIAN </option>
+                                                                                    <option value="11"> AUSTRIAN </option>
+                                                                                    <option value="12"> AZERBAIJAN </option>
+                                                                                    <option value="13"> BAHRAINI </option>
+                                                                                    <option value="14"> BANGLADESHI </option>
+                                                                                    <option value="15"> BELGIAN </option>
+                                                                                    <option value="16"> BELIZE </option>
+                                                                                    <option value="17"> BHUTANESE </option>
+                                                                                    <option value="18"> BOLIVIAN </option>
+                                                                                    <option value="19"> BRAZILIAN </option>
+                                                                                    <option value="20"> BRITISH </option>
+                                                                                    <option value="21"> BRUNEIAN </option>
+                                                                                    <option value="22"> BULGARIAN </option>
+                                                                                    <option value="23"> BURMESE </option>
+                                                                                    <option value="24"> CAMBODIAN </option>
+                                                                                    <option value="25"> CAMEROONIAN </option>
+                                                                                    <option value="26"> CANADIAN </option>
+                                                                                    <option value="27"> CHAD </option>
+                                                                                    <option value="28"> CHILEAN </option>
+                                                                                    <option value="29"> CHINESE </option>
+                                                                                    <option value="30"> CHUUKESH </option>
+                                                                                    <option value="31"> COLOMBIAN </option>
+                                                                                    <option value="32"> CONGOLAISE </option>
+                                                                                    <option value="33"> COSTA RICAN </option>
+                                                                                    <option value="34"> CROATIAN </option>
+                                                                                    <option value="35"> CUBAN </option>
+                                                                                    <option value="36"> CYPRIOT </option>
+                                                                                    <option value="37"> DANES </option>
+                                                                                    <option value="38"> DANISH </option>
+                                                                                    <option value="39"> DEUTSCH </option>
+                                                                                    <option value="40"> DOMINICAN </option>
+                                                                                    <option value="41"> DUTCH </option>
+                                                                                    <option value="42"> ECUADORIAN </option>
+                                                                                    <option value="43"> EGYPTIAN </option>
+                                                                                    <option value="44"> EMIRATI </option>
+                                                                                    <option value="45"> ERITREAN </option>
+                                                                                    <option value="46"> ETHIOPIAN </option>
+                                                                                    <option value="47"> EUROPEAN </option>
+                                                                                    <option value="48"> FIJIAN </option>
+                                                                                    <option value="49"> FINLAND </option>
+                                                                                    <option value="50"> FRENCH </option>
+                                                                                    <option value="51"> GABONAISE </option>
+                                                                                    <option value="52"> GERMAN </option>
+                                                                                    <option value="53"> GHANIAN </option>
+                                                                                    <option value="54"> GREEK </option>
+                                                                                    <option value="55"> GUATEMALTECA </option>
+                                                                                    <option value="56"> GUINEENNE </option>
+                                                                                    <option value="57"> HAITIAN </option>
+                                                                                    <option value="58"> HONDURENA </option>
+                                                                                    <option value="59"> HONGKONG </option>
+                                                                                    <option value="60"> HUNGARIAN </option>
+                                                                                    <option value="61"> INDIAN </option>
+                                                                                    <option value="62"> INDONESIAN </option>
+                                                                                    <option value="63"> IRANIAN </option>
+                                                                                    <option value="64"> IRAQI </option>
+                                                                                    <option value="65"> IRISH </option>
+                                                                                    <option value="66"> ISRAELI </option>
+                                                                                    <option value="67"> ITALIAN </option>
+                                                                                    <option value="68"> IVORIAN </option>
+                                                                                    <option value="69"> JAMAICAN </option>
+                                                                                    <option value="70"> JAPANESE </option>
+                                                                                    <option value="71"> JORDANIAN </option>
+                                                                                    <option value="72"> KAZAKHSTAN </option>
+                                                                                    <option value="73"> KENYAN </option>
+                                                                                    <option value="74"> KOREAN </option>
+                                                                                    <option value="75"> KUWAITI </option>
+                                                                                    <option value="76"> LAOTIAN </option>
+                                                                                    <option value="77"> LEBANESE </option>
+                                                                                    <option value="78"> LIBERIAN </option>
+                                                                                    <option value="79"> LIBYAN </option>
+                                                                                    <option value="80"> LUXEMBOURGEOISE </option>
+                                                                                    <option value="81"> MALAGASY </option>
+                                                                                    <option value="82"> MALAYSIAN </option>
+                                                                                    <option value="83"> MALDIVIAN </option>
+                                                                                    <option value="84"> MALIAN </option>
+                                                                                    <option value="85"> MALTESE </option>
+                                                                                    <option value="86"> MAURITIAN </option>
+                                                                                    <option value="87"> MEXICAN </option>
+                                                                                    <option value="88"> MONGOLIAN </option>
+                                                                                    <option value="89"> MOROCCAN </option>
+                                                                                    <option value="90"> MYANMAR </option>
+                                                                                    <option value="91"> NAMIBIAN </option>
+                                                                                    <option value="92"> NEPALESE </option>
+                                                                                    <option value="93"> NETHERLANDER </option>
+                                                                                    <option value="94"> NEW ZEALANDER </option>
+                                                                                    <option value="95"> NIGERIAN </option>
+                                                                                    <option value="96"> NORWEGIAN </option>
+                                                                                    <option value="97"> OMANI </option>
+                                                                                    <option value="98"> PAKISTANI </option>
+                                                                                    <option value="99"> PALESTINIAN </option>
+                                                                                    <option value="100"> PANAMANIAN </option>
+                                                                                    <option value="101"> PAPUA NEW GUINEAN </option>
+                                                                                    <option value="102"> PAPUAN </option>
+                                                                                    <option value="103"> PERUVIAN </option>
+                                                                                    <option value="104"> POLISH </option>
+                                                                                    <option value="105"> PORTUGESE </option>
+                                                                                    <option value="106"> QATARI </option>
+                                                                                    <option value="107"> ROMANIAN </option>
+                                                                                    <option value="108"> RUSSIAN </option>
+                                                                                    <option value="109"> RWANDA </option>
+                                                                                    <option value="110"> SAMOAN </option>
+                                                                                    <option value="111"> SCOT </option>
+                                                                                    <option value="112"> SERB </option>
+                                                                                    <option value="113"> SINGAPOREAN </option>
+                                                                                    <option value="114"> SLOVAK </option>
+                                                                                    <option value="115"> SLOVENIAN </option>
+                                                                                    <option value="116"> SOLOMON ISLANDER </option>
+                                                                                    <option value="117"> SOMALIAN </option>
+                                                                                    <option value="118"> SOUTH AFRICAN </option>
+                                                                                    <option value="119"> SPANISH </option>
+                                                                                    <option value="120"> SRI LANKAN </option>
+                                                                                    <option value="121"> ST. KITTS AND NEVIS </option>
+                                                                                    <option value="122"> SUDANESE </option>
+                                                                                    <option value="123"> SWEDISH </option>
+                                                                                    <option value="124"> SWISS </option>
+                                                                                    <option value="125"> SYRIAN </option>
+                                                                                    <option value="126"> TAIWANESE </option>
+                                                                                    <option value="127"> TANZANIAN </option>
+                                                                                    <option value="128"> THAI </option>
+                                                                                    <option value="129"> TIMORENSE </option>
+                                                                                    <option value="130"> TONGAN </option>
+                                                                                    <option value="131"> TUNISIAN </option>
+                                                                                    <option value="132"> TURKISH </option>
+                                                                                    <option value="133"> UGANDAN </option>
+                                                                                    <option value="134"> UKRAINIAN </option>
+                                                                                    <option value="135"> UMURUNDI </option>
+                                                                                    <option value="136"> UZBEKISTANI </option>
+                                                                                    <option value="137"> VANUATU </option>
+                                                                                    <option value="138"> VENEZUELAN </option>
+                                                                                    <option value="139"> VIETNAMESE </option>
+                                                                                    <option value="140"> YEMENI </option>
+                                                                                    <option value="141"> ZAMBIAN </option>
+                                                                                    <option value="142"> ZIMBABWEAN </option>
+                                                                            </select>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group ">
+                                    <label for="civil_status"> Civil Status
+                                        <span class="req-fields">*</span>
+                                    </label>
+                                    <select id="civil_status" name="civil_status" class="form-control" value=""
+                                            data-validation="required">
+                                        <option value="" selected="selected"></option>
+                                                                                    <option value="1"> SINGLE (WALANG ASAWA) </option>
+                                                                                    <option value="2"> MARRIED (MAY ASAWA) </option>
+                                                                                    <option value="3"> SEPARATED (HIWALAY SA ASAWA) </option>
+                                                                                    <option value="4"> WIDOWED (BIYUDA) </option>
+                                                                                    <option value="5"> WIDOWER (BIYUDO) </option>
+                                                                                    <option value="6"> ANNULLED (PINAWALANG-BISA) </option>
+                                                                            </select>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group ">
+                                    <label for="religion"> Religion
+                                        <span class="req-fields">*</span>
+                                    </label>
+                                    <select id="religion" name="religion" class="form-control" value=""
+                                            data-validation="required">
+                                        <option value="" selected="selected"></option>
+                                                                                    <option value="1"> CHRISTIAN </option>
+                                                                                    <option value="2"> ISLAM </option>
+                                                                                    <option value="3"> ROMAN CATHOLIC </option>
+                                                                                    <option value="4"> BORN AGAIN </option>
+                                                                                    <option value="5"> EVANGELICAL </option>
+                                                                                    <option value="6"> IGLESIA NI CRISTO </option>
+                                                                                    <option value="7"> BUDDHIST </option>
+                                                                                    <option value="8"> JEHOVAH&#039;S WITNESS </option>
+                                                                                    <option value="9"> PROTESTANT </option>
+                                                                                    <option value="10"> SEVENTH DAY ADVENTIST </option>
+                                                                                    <option value="11"> BAPTIST </option>
+                                                                                    <option value="12"> LATTER DAY SAINTS (MORMON) </option>
+                                                                                    <option value="13"> PENTECOSTAL </option>
+                                                                                    <option value="14"> UNITED METHODIST </option>
+                                                                                    <option value="15"> BIBLE METHODIST </option>
+                                                                                    <option value="16"> CHURCH OF CHRIST </option>
+                                                                                    <option value="17"> JESUS MIRACLE CRUSADE </option>
+                                                                                    <option value="18"> AGLIPAYAN </option>
+                                                                                    <option value="19"> CHURCH OF GOD </option>
+                                                                                    <option value="20"> JESUS IS LORD CHURCH </option>
+                                                                                    <option value="21"> EL SHADDAI </option>
+                                                                                    <option value="22"> ASSEMBLIES OF GOD </option>
+                                                                                    <option value="23"> HINDU </option>
+                                                                                    <option value="24"> JUDAISM </option>
+                                                                                    <option value="25"> SIKH </option>
+                                                                                    <option value="26"> OTHER </option>
+                                                                            </select>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group ">
+                                    <label for="height"> Height
+                                        <span class="req-fields">*</span>
+                                    </label>
+                                    <div class="input-group">
+                                        <input type="text" id="height" name="height" class="form-control"
+                                               data-validation="number required"
+                                               data-validation-allowing="float,positive"
+                                        />
+                                        <span class="input-group-addon">
+                                            cm
+                                        </span>
+                                    </div>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group ">
+                                    <label for="weight"> Weight
+                                        <span class="req-fields">*</span>
+                                    </label>
+                                    <div class="input-group">
+                                        <input type="text" id="weight" name="weight" class="form-control"
+                                               data-validation="number required"
+                                               data-validation-allowing="float,positive"/>
+                                        <span class="input-group-addon">
+                                            kg
+                                        </span>
+                                    </div>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group ">
+                                    <label for="hair_color"> Hair Color
+                                        <span class="req-fields">*</span>
+                                    </label>
+                                    <select id="hair_color" name="hair_color" class="form-control" value=""
+                                            data-validation="required">
+                                        <option value="" selected="selected"></option>
+                                                                                    <option value="1"> BLACK (ITIM) </option>
+                                                                                    <option value="2"> BROWN (KAYUMANGGI) </option>
+                                                                                    <option value="3"> BLONDE (BLOND) </option>
+                                                                                    <option value="4"> AUBURN (MATINGKAD NA PULA) </option>
+                                                                                    <option value="5"> CHESTNUT (MATINGKAD NA BROWN) </option>
+                                                                                    <option value="6"> RED (PULA) </option>
+                                                                                    <option value="7"> GREY AND WHITE (KULAY ABO AT PUTI) </option>
+                                                                            </select>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group ">
+                                    <label for="eye_color"> Eye Color
+                                        <span class="req-fields">*</span>
+                                    </label>
+                                    <select id="eye_color" name="eye_color" class="form-control" value=""
+                                            data-validation="required">
+                                        <option value="" selected="selected"></option>
+                                                                                    <option value="1"> AMBER (DILAW) </option>
+                                                                                    <option value="2"> BLACK (ITIM) </option>
+                                                                                    <option value="3"> BLUE (BUGHAW) </option>
+                                                                                    <option value="4"> BROWN (KAYUMANGGI) </option>
+                                                                                    <option value="5"> GRAY (KULAY ABO) </option>
+                                                                                    <option value="6"> GREEN (BERDE) </option>
+                                                                                    <option value="7"> HAZEL (KULAY-KASTANYO) </option>
+                                                                                    <option value="8"> VIOLET (LILIA) </option>
+                                                                            </select>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group ">
+                                    <label for="contact_number"> Contact Number
+                                        <span class="req-fields"> </span>
+                                    </label>
+                                    <input type="text" id="contact_number" name="contact_number" class="form-control"
+                                           value="" data-sanitize="trim"/>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                                                <br/>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <label for="none"> Distinguishing Marks </label>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group ">
+                                    <label for="none_location"> Location </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <label>
+                                    <input type="checkbox" id="mole" name="mole" class="control-label" value=""> Mole
+                                    <i>(Nunal)</i>
+                                </label>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group ">
+                                    <input type="text" id="mole_location" name="mole_location" class="form-control"
+                                           value="" data-validation="required" data-sanitize="trim" disabled/>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <label>
+                                    <input type="checkbox" id="scar" name="scar" class="control-label" value=""> Scar
+                                    <i>(Peklat)</i>
+                                </label>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group ">
+                                    <input type="text" id="scar_location" name="scar_location" class="form-control"
+                                           value="" data-validation="required" data-sanitize="trim" disabled/>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <label>
+                                    <input type="checkbox" id="tattoo" name="tattoo" class="control-label" value="">
+                                    Tattoo
+                                </label>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group ">
+                                    <input type="text" id="tattoo_location" name="tattoo_location" class="form-control"
+                                           value="" data-validation="required" data-sanitize="trim" disabled/>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <label>
+                                    <input type="checkbox" id="birthmark" name="birthmark" class="control-label"
+                                           value=""> Birthmark <i>(Balat)</i>
+                                </label>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group ">
+                                    <input type="text" id="birthmark_location" name="birthmark_location"
+                                           class="form-control" value="" data-validation="required" data-sanitize="trim" disabled/>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <label>
+                                    <input type="checkbox" id="harelip" name="harelip" class="control-label" value="">
+                                    Harelip <i>(Bingot)</i>
+                                </label>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group ">
+                                    <input type="text" id="harelip_location" name="harelip_location"
+                                           class="form-control" value="" data-validation="required" data-sanitize="trim" disabled/>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <label>
+                                    <input type="checkbox" id="skintag" name="skintag" class="control-label" value="">
+                                    Skin Tag <i>(Kuntil)</i>
+                                </label>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group ">
+                                    <input type="text" id="skintag_location" name="skintag_location"
+                                           class="form-control" value="" data-validation="required" data-sanitize="trim" disabled/>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                                                <br/>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <i>Other Information:</i>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group ">
+                                    <label for="occupational_id"> Occupational ID</label>
+                                    <input type="text" id="occupational_id" name="occupational_id" class="form-control"
+                                           value="" data-sanitize="trim"/>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group ">
+                                    <label for="occupation"> Occupation</label>
+                                    <input type="text" id="occupation" name="occupation" class="form-control"
+                                           value="" data-sanitize="trim"/>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group ">
+                                    <label for="employer"> Employer</label>
+                                    <input type="text" id="employer" name="employer" class="form-control"
+                                           value="" data-sanitize="trim"/>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group ">
+                                    <label for="employer_address"> Employer Address</label>
+                                    <input type="text" id="employer_address" name="employer_address" class="form-control"
+                                           value="" data-sanitize="trim"/>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group ">
+                                    <label for="blood_type"> Blood Type</label>
+                                    <input type="text" id="blood_type" name="blood_type" class="form-control"
+                                           value="" data-sanitize="trim"/>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                                                <br/>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <i>In Case of Emergency:</i>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group ">
+                                    <label for="emergency_contact_person"> Contact Person
+                                        <span class="req-fields"> </span>
+                                    </label>
+                                    <input type="text" id="emergency_contact_person" name="emergency_contact_person"
+                                           class="form-control" value="" data-sanitize="trim"/>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group ">
+                                    <label for="emergency_contact_number"> Contact No.
+                                        <span class="req-fields"> </span>
+                                    </label>
+                                    <input type="text" id="emergency_contact_number" name="emergency_contact_number"
+                                           class="form-control" value="" data-sanitize="trim"/>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group ">
+                                    <label for="emergency_contact_address"> Contact Address
+                                        <span class="req-fields"> </span>
+                                    </label>
+                                    <input type="text" id="emergency_contact_address" name="emergency_contact_address"
+                                           class="form-control" value="" data-sanitize="trim"/>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                                                <br/>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <label>Consent</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <input type="checkbox" id="consent" name="consent" value="" data-validation="required"
+                                           data-validation-error-msg="Please read and give your consent to the terms governing the use of this service.">
+                                    <i>I, the Data Subject, hereby give my expressed consent to this station (DPO, PIC & PIP) for the processing, storing, updating, and retrieving of my personal information indicated herein. I also certify that I was made aware of the following: That the data and/or biometrics captured are necessary to countercheck any crime committed in the past should there be any. That any crime committed in the future will be appended to my personal information. That authorized public safety officers are allowed to access and validate the data given in this application. That information will be stored and kept confidential, within its validity making it available for my next transaction. That processing of information is made through online technologies. That I was made aware of my Rights as Data Subject as indicated in RA 10173, and I was informed about the contact details of the DPO, PIC & PIP.</i>
+                                </div>
+                            </div>
+                        </div>
+                                                                                                <br/>
+                        <div class="row" style="text-align: center">
+                            <button type="submit" class="btn btn-success btn-lg submit-button"/>
+                            <i class="fas fa-file-import"></i>&nbsp;&nbsp;SUBMIT
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-1 col-md-2"></div>
+    </div>
+    </div>
+</div>
+<script src="https://idcorp-clearance.com/assets/scripts/jquery.min.js" type="text/javascript"></script>
+<script src="https://idcorp-clearance.com/assets/scripts/bootstrap.min.js" type="text/javascript"></script>
+<script src="https://idcorp-clearance.com/assets/scripts/jquery.form-validator.min.js"></script>
+<script src="https://idcorp-clearance.com/assets/scripts/sanitize.js"></script>
+<script src="https://idcorp-clearance.com/assets/scripts/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="https://idcorp-clearance.com/assets/scripts/dataTables.bootstrap.min.js" type="text/javascript"></script>
+<script src="https://idcorp-clearance.com/assets/scripts/dataTables.responsive.min.js" type="text/javascript"></script>
+<script src="https://idcorp-clearance.com/assets/scripts/responsive.bootstrap.min.js" type="text/javascript"></script>
+<script src="https://idcorp-clearance.com/assets/scripts/moment.min.js" type="text/javascript"></script>
+<script src="https://idcorp-clearance.com/assets/scripts/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://idcorp-clearance.com/assets/scripts/custom.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="https://idcorp-clearance.com/assets/scripts/ie10-viewport-bug-workaround.js" type="text/javascript"></script>
+</body>
+</html>
